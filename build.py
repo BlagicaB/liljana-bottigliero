@@ -97,11 +97,11 @@ person = {
   "@context": "https://schema.org", "@type": "Person",
   "name": "Yana Bottigliero", "alternateName": "Liljana Bottigliero",
   "url": "https://liljanabottigliero.com/",
-  "image": "https://liljanabottigliero.com/files/img/hero.jpg",
+  "image": "https://liljanabottigliero.com/files/img/hero-campaign.jpg",
   "jobTitle": "Digital Editor-in-Chief, North Pointe",
   "affiliation": {"@type": "HighSchool", "name": "Grosse Pointe North High School"},
   "email": "mailto:liljana.bottigliero2028@gmail.com",
-  "award": [f"{y} MIPA {c}, {p}" for y, p, c in AWARDS],
+  "award": ["2026 Hammer Award, Grosse Pointe North High School"] + [f"{y} MIPA {c}, {p}" for y, p, c in AWARDS],
   "knowsAbout": ["Journalism", "Digital media", "Infographics", "Photography", "Editorial writing"],
 }
 

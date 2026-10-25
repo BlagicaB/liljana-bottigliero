@@ -58,7 +58,7 @@ em { font-style: italic; color: var(--red); }
 .lede { font-size: 1.12rem; max-width: 46ch; margin: 0 0 2rem; }
 .actions { display: flex; flex-wrap: wrap; gap: .8rem; }
 .hero-photo { margin: 0; position: relative; }
-.hero-photo img { width: 100%; aspect-ratio: 4/5; object-fit: cover; object-position: center 30%; border: 3px solid var(--ink); box-shadow: 14px 14px 0 var(--red); }
+.hero-photo img { width: 100%; aspect-ratio: 4/5; object-fit: cover; object-position: center top; border: 3px solid var(--ink); box-shadow: 14px 14px 0 var(--red); }
 .stats { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(4, 1fr); border-top: 3px solid var(--ink); border-bottom: 1px solid var(--ink); }
 .stats li { padding: 1.3rem 1rem; border-left: 1px solid var(--rule); }
 .stats li:first-child { border-left: 0; }
@@ -193,7 +193,24 @@ dd a:hover { color: var(--gold); }
 .callout { display: flex; flex-direction: column; gap: .2rem; padding: 1.4rem 1.6rem; margin: 0 0 2.2rem; background: var(--gold); color: var(--ink); border-radius: 2px; }
 .callout b { font: 900 clamp(1.5rem, 3.6vw, 2.2rem)/1.1 var(--serif); }
 .campaign .prose p { color: #E7EFE9; }
-.campaign-photos { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-top: 2.5rem; }
-.campaign-photos img { width: 100%; aspect-ratio: 4/3; object-fit: cover; border: 3px solid #FFF; }
+.campaign-photos { display: grid; grid-template-columns: 1fr 2fr; gap: 1.5rem; margin-top: 2.5rem; align-items: start; }
+.campaign-photos figure { margin: 0; }
+.campaign-photos img { width: 100%; height: auto; border: 3px solid #FFF; }
 .campaign figcaption { color: #BFD0C5; }
 @media (max-width: 600px) { .campaign-photos { grid-template-columns: 1fr; } }
+
+/* school award */
+.school-award { padding: 1.6rem 1.8rem; margin: 0 0 3rem; border: 2px solid var(--gold); }
+.school-award h3 { font: 900 clamp(2rem, 5vw, 3rem)/1 var(--serif); color: #FFF; margin-bottom: .5rem; }
+.school-award .kicker { color: var(--gold); }
+.school-award p:last-child { margin: 0; font-size: 1.1rem; }
+.award-head { font: 900 clamp(1.6rem, 3.6vw, 2.2rem)/1.1 var(--serif); margin-bottom: .6rem; }
+
+/* project */
+.project-shot { display: block; margin: 0 0 2rem; border: 3px solid var(--ink); box-shadow: 10px 10px 0 var(--green); transition: transform .15s; }
+.project-shot:hover { transform: translate(-2px, -2px); }
+.facts { list-style: none; padding: 0; margin: 0 0 2rem; display: grid; grid-template-columns: 1fr 1fr; gap: 0 2rem; }
+.facts li { padding: 1rem 0; border-top: 1px solid var(--rule); }
+.facts b { display: block; font: 700 1.25rem var(--serif); color: var(--ink); }
+.facts span { font-size: .94rem; color: var(--muted); }
+@media (max-width: 600px) { .facts { grid-template-columns: 1fr; } }
