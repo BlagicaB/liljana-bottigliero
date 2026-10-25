@@ -71,7 +71,7 @@ blockquote p { font: italic 400 clamp(1.6rem, 3.6vw, 2.4rem)/1.25 var(--serif); 
 blockquote cite { font-style: normal; font-size: .86rem; color: var(--muted); }
 .prose p { margin: 0 0 1.3rem; max-width: 68ch; }
 .dropcap::first-letter { float: left; font: 900 4.6rem/.8 var(--serif); color: var(--red); margin: .35rem .6rem 0 0; }
-.photo-pair { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-top: 3rem; }
+.photo-pair { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; margin-top: 3rem; }
 .photo-pair img { width: 100%; aspect-ratio: 4/5; object-fit: cover; border: 2px solid var(--ink); }
 figcaption { font-size: .86rem; color: var(--muted); margin-top: .7rem; line-height: 1.5; }
 
@@ -193,11 +193,13 @@ dd a:hover { color: var(--gold); }
 .callout { display: flex; flex-direction: column; gap: .2rem; padding: 1.4rem 1.6rem; margin: 0 0 2.2rem; background: var(--gold); color: var(--ink); border-radius: 2px; }
 .callout b { font: 900 clamp(1.5rem, 3.6vw, 2.2rem)/1.1 var(--serif); }
 .campaign .prose p { color: #E7EFE9; }
-.campaign-photos { display: grid; grid-template-columns: 1fr 2fr; gap: 1.5rem; margin-top: 2.5rem; align-items: start; }
+.campaign-photos { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-top: 2.5rem; align-items: start; }
 .campaign-photos figure { margin: 0; }
+.campaign-photos .wide { grid-column: 1 / -1; }
 .campaign-photos img { width: 100%; height: auto; border: 3px solid #FFF; }
 .campaign figcaption { color: #BFD0C5; }
 @media (max-width: 600px) { .campaign-photos { grid-template-columns: 1fr; } }
+@media (min-width: 601px) and (max-width: 860px) { .photo-pair { grid-template-columns: 1fr 1fr; } }
 
 /* school award */
 .school-award { padding: 1.6rem 1.8rem; margin: 0 0 3rem; border: 2px solid var(--gold); }
