@@ -15,7 +15,7 @@
 * { box-sizing: border-box; }
 html { scroll-behavior: smooth; scroll-padding-top: 64px; }
 body { margin: 0; background: var(--paper); color: var(--body); font: 17px/1.65 var(--sans); -webkit-font-smoothing: antialiased; }
-img { max-width: 100%; display: block; }
+img { max-width: 100%; height: auto; display: block; }
 a { color: var(--red); }
 h1, h2, h3, h4 { font-family: var(--serif); color: var(--ink); margin: 0; line-height: 1.05; }
 em { font-style: italic; color: var(--red); }
@@ -216,3 +216,29 @@ dd a:hover { color: var(--gold); }
 .facts b { display: block; font: 700 1.25rem var(--serif); color: var(--ink); }
 .facts span { font-size: .94rem; color: var(--muted); }
 @media (max-width: 600px) { .facts { grid-template-columns: 1fr; } }
+
+/* travel strip */
+.travel { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; margin-top: 1.5rem; }
+.travel figure { margin: 0; }
+.travel img { width: 100%; aspect-ratio: 3/4; object-fit: cover; border: 2px solid var(--ink); }
+.travel figcaption { margin-top: .4rem; font-size: .8rem; font-weight: 600; text-transform: uppercase; letter-spacing: .1em; }
+
+/* awards photos */
+.school-award { display: grid; grid-template-columns: 1.3fr 1fr; gap: 2rem; align-items: center; }
+.school-award figure { margin: 0; }
+.school-award img { width: 100%; aspect-ratio: 1; object-fit: cover; border: 3px solid #FFF; }
+.mipa-row { display: grid; grid-template-columns: 1fr 2fr; gap: 2rem; align-items: center; }
+.mipa-row .msu { margin: 0; }
+.mipa-row .msu img { width: 100%; aspect-ratio: 3/4; object-fit: cover; border: 3px solid #FFF; }
+
+/* tennis tile */
+.photo-tile { grid-column: 1 / -1; padding: 0; display: grid; grid-template-columns: 1.4fr 1fr; }
+.photo-tile img { width: 100%; height: 100%; object-fit: cover; border-right: 2px solid var(--ink); }
+.photo-tile > div { padding: 1.5rem; align-self: center; }
+
+@media (max-width: 600px) {
+  .travel { grid-template-columns: 1fr 1fr; }
+  .school-award, .mipa-row, .photo-tile { grid-template-columns: 1fr; }
+  .mipa-row .msu { max-width: 320px; }
+  .photo-tile img { border-right: 0; border-bottom: 2px solid var(--ink); }
+}
